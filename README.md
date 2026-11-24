@@ -18,19 +18,21 @@ it twice writes identical bytes to `/output/entry.png`.
 ## The day, in the image
 
 - **COP31 collapses with no deal** — talks in Antalya, Turkiye end
-  with no agreement; the final draft leaves out fossil fuels.
-- **Drone hits the Kyiv region** — a Russian drone hits a building;
-  at least 14 people are missing, President Zelenskiy says.
+  with no agreement; the final draft leaves out fossil fuels, the
+  first climate summit to collapse since 2009.
+- **Huang returns to Nvidia** — Nvidia reinstates Jensen Huang as
+  chief executive, 11 days after he quit; shares jump 31 percent.
 - **Factory fire search resumes** — in Cikande, Java, Indonesia;
-  police remove 24 body bags and dozens of workers are missing.
-- **Cartel boss captured** — Mexico captures FBI most-wanted
-  cartel boss El Chapo Isidro; firefights in Sinaloa leave
-  11 people dead.
-- **Nepal PM meets Modi** — Nepal PM Balendra Shah holds bilateral
-  talks with PM Modi in New Delhi.
-- Also today: South Korea's education minister quits over an AI
-  exam-cheating scandal, and India post a record 720/9d in the
-  Wellington Test against New Zealand.
+  officials confirm 24 killed and about 30 still missing.
+- **Ukraine sinks a Russian warship** — Ukrainian sea drones sank
+  the Russian corvette Merkury in Benghazi, Libya, and hit a cargo
+  ship carrying weapons.
+- **India gives Nepal 1.62 billion** — Nepal PM Balendra Shah holds
+  talks with PM Modi in New Delhi. India announces a 1.62 billion
+  dollar package and 8 deals.
+- Also today: 11 dead and 2 missing after a Russian drone hits a
+  building in the Kyiv region, and a Delta tech failure delays
+  1,300 flights before Thanksgiving.
 
 ## Run it
 

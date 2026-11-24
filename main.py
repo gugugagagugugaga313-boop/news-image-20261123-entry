@@ -219,6 +219,20 @@ def draw_icon(c, kind, cx, cy, r):
                    cx + r // 4, cy + r // 2, WHITE)
         c.triangle(cx - r // 4, cy + r // 2, cx + r // 3, cy - r // 2,
                    cx + r - 4, cy + r // 2, PAPER)
+    elif kind == "chip":
+        c.circle(cx, cy, r, NAVY)
+        c.fill_rect(cx - r // 2, cy - r // 2, r, r, GOLD)
+        c.fill_rect(cx - r // 4, cy - r // 4, r // 2, r // 2, NAVY)
+        for dx in (-1, 0, 1):
+            c.fill_rect(cx + dx * 12 - 2, cy - r // 2 - 6, 4, 6, GOLD)
+            c.fill_rect(cx + dx * 12 - 2, cy + r // 2, 4, 6, GOLD)
+    elif kind == "ship":
+        c.circle(cx, cy, r, BLUE)
+        c.fill_rect(cx - 2, cy - r + 8, 4, r - 4, WHITE)
+        c.triangle(cx + 2, cy - r + 8, cx + 2, cy + 2,
+                   cx + r - 8, cy + 2, GOLD)
+        c.triangle(cx - r + 6, cy + 4, cx + r - 6, cy + 4,
+                   cx, cy + r - 6, WHITE)
 
 
 def panel(c, x, y, w, h, tag, headline, body, accent, icon, fact):
@@ -255,46 +269,46 @@ def main():
           "and the EU and others reject a deal "
           "without a phase-out. Climate diplomacy "
           "is left in doubt.",
-          RED, "globe", "NO NEW TEXT")
-    panel(c, 652, 168, 356, 372, "WAR  -  UKRAINE",
-          ["DRONE HITS", "KYIV REGION"],
-          "A Russian drone hits a building "
-          "in the Kyiv region. At least 14 "
-          "people are missing, President "
-          "Zelenskiy says, as rescuers "
-          "search the rubble.",
-          NAVY, "building", "14 MISSING")
+          RED, "globe", "FIRST COLLAPSE SINCE 2009")
+    panel(c, 652, 168, 356, 372, "BUSINESS  -  NVIDIA",
+          ["HUANG RETURNS", "SHARES UP 31%"],
+          "Nvidia reinstates Jensen Huang as "
+          "chief executive on Monday, 11 days "
+          "after he quit. Shares jump 31 "
+          "percent, adding almost 1 trillion "
+          "dollars in value.",
+          BLUE, "chip", "+31 PERCENT")
 
     # Second row: three panels.
     panel(c, 16, 556, 320, 312, "DISASTER  -  INDONESIA",
           ["FACTORY FIRE", "SEARCH RESUMES"],
           "Search resumes on Monday at the "
           "candy factory in Cikande, Java. "
-          "Police remove 24 body bags and "
-          "dozens of workers are missing.",
-          ORANGE, "flame", "24 BODY BAGS")
-    panel(c, 352, 556, 320, 312, "CRIME  -  MEXICO",
-          ["CARTEL BOSS", "CAPTURED"],
-          "Mexico captures FBI most-wanted "
-          "cartel boss El Chapo Isidro. "
-          "Firefights in Sinaloa leave "
-          "11 people dead.",
-          TEAL, "badge", "11 DEAD")
+          "Officials confirm 24 killed and "
+          "about 30 still missing.",
+          ORANGE, "flame", "24 KILLED")
+    panel(c, 352, 556, 320, 312, "WAR  -  LIBYA",
+          ["UKRAINE SINKS", "RUSSIAN WARSHIP"],
+          "Ukraine sea drones sank the "
+          "Russian corvette Merkury in "
+          "Benghazi, Libya, and hit a cargo "
+          "ship carrying weapons.",
+          NAVY, "ship", "SHIP SUNK")
     panel(c, 688, 556, 320, 312, "DIPLOMACY  -  DELHI",
-          ["NEPAL PM", "MEETS MODI"],
+          ["MODI GIVES NEPAL", "1.62 BILLION"],
           "Nepal PM Balendra Shah holds "
-          "bilateral talks with PM Modi "
-          "in New Delhi, on a state visit "
-          "to India, 22-23 November.",
-          GREEN, "mountain", "22-23 NOV")
+          "talks with PM Modi in New Delhi. "
+          "India announces a 1.62 billion "
+          "dollar package and 8 deals.",
+          GREEN, "mountain", "8 DEALS")
 
     # Footer ticker: two more stories of the day.
     c.fill_rect(16, 884, 992, 124, NAVY)
     c.draw_text(32, 900, "ALSO TODAY", 2, GOLD)
-    c.draw_wrapped(32, 928, "SOUTH KOREA: EDUCATION MINISTER QUITS "
-                   "OVER AI EXAM CHEATING.  SPORT: INDIA POST "
-                   "A RECORD 720/9D IN THE WELLINGTON TEST "
-                   "AGAINST NEW ZEALAND.",
+    c.draw_wrapped(32, 928, "KYIV: 11 DEAD, 2 MISSING AFTER DRONE "
+                   "HIT IN THE KYIV REGION.  DELTA: TECH "
+                   "FAILURE DELAYS 1,300 FLIGHTS BEFORE "
+                   "THANKSGIVING.",
                    2, WHITE, 960, 20)
     c.draw_text(32, 984, "REPORTED ON 23 NOVEMBER 2026", 2, LIGHT)
 
